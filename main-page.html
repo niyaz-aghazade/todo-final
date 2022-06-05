@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO App</title>
+    <script
+      src="https://kit.fontawesome.com/baccb61320.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link href="css/roundSlider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    
+  </head>
+
+  <body>
+    <section id="main-section">
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="col-md-2 order-2 profile-div"
+            style="height: 100vh; background-color: #f7f8fc"
+          >
+            <span class="user-name-info"></span>
+            <span class="user-mail-info"></span>
+            <span class="user-number-info"></span>
+            <div class="profile-div-button">
+              <a
+                href="/profile-settings-page.html"
+                class="btn btn-primary user-setting"
+              >
+                <i class="fas fa-user-cog"></i>
+              </a>
+              <button class="btn btn-primary done-items-btn">
+                <i class="fas fa-clipboard-check"></i>
+              </button>
+            </div>
+            <div class="importance-info-class">
+              <div id="all-items" class="row">
+                <button id="all" class="btn">All</button>
+              </div>
+              <div id="important-items" class="row">
+                <button
+                  id="Important"
+                  class="btn importance-letter-btn important"
+                >
+                  Important
+                </button>
+              </div>
+              <div id="semi-inportant-items" class="row">
+                <button
+                  id="Semi-Important"
+                  class="btn importance-letter-btn semi-important"
+                >
+                  Semi-Important
+                </button>
+              </div>
+              <div id="not-important-items" class="row">
+                <button
+                  id="Not Important"
+                  class="btn importance-letter-btn not-important"
+                >
+                  Not Important
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7 main-div order-1">
+            <div class="title">
+              <p class="name-of-app">TO-DO App</p>
+
+              <input
+                type="text"
+                class="form-control task-input"
+                aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm"
+                placeholder="Enter the task"
+                onfocus="this.value=''"
+              />
+              <input
+                type="text"
+                class="form-control tag-input"
+                aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm"
+                placeholder="Tag"
+                onfocus="this.value=''"
+              />
+              <select
+                id="importanceSelection"
+                class="form-control"
+                style="width: 100px; margin-right: 2rem"
+              >
+                <option>Important</option>
+                <option>Semi-Important</option>
+                <option>Not Important</option>
+              </select>
+              <button class="btn btn-primary add-task-btn">+</button>
+            </div>
+            
+          </div>
+          
+
+          <div
+            class="col-md-3 order-3"
+            style="height: 100vh; background-color: #f7f8fc"
+          >
+            <div class="row">
+              <div class="col-md-11">
+                <p class="useful-info-cls">Useful Informations</p>
+                <div class="container weather-div"></div>
+                <div class="container quote-div">
+                  <span class="advice-title-div-span">Latest SpaceX Info</span>
+                </div>
+              </div>
+              <div class="col-md-1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="edit-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-7">
+            <form>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="tagName"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter Tag name"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="col-5">
+            <select
+                id="importanceSelection2"
+                class="form-control"
+              >
+                <option>Important</option>
+                <option>Semi-Important</option>
+                <option>Not Important</option>
+              </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <form>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="taskName"
+                  placeholder="Enter Task Name"
+                />
+              </div>
+            </form>
+          </div>
+         
+      </div>
+      <div id="slider"></div>
+      <div class="save-btn-div">
+        <button class="btn btn-primary save-btn">Submit</button>
+      </div>
+    </section>
+
+    <section class="checked-div">
+      <svg
+        class="checkmark"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 52 52"
+      >
+        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+        <path
+          class="checkmark__check"
+          fill="none"
+          d="M14.1 27.2l7.1 7.2 16.7-16.8"
+        />
+      </svg>
+    </section>
+
+    <section>
+      <div class="overlay"></div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/roundSlider.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

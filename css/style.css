@@ -1,0 +1,659 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+@media (max-width: 330px) {
+  #main-section .form-control {
+    width: 160px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-div {
+    position: relative !important;
+  }
+  .title {
+    display: block !important;
+    margin-left: auto !important;
+  }
+
+  .name-of-app {
+    text-align: center;
+    margin-bottom: 1rem !important;
+  }
+
+  #main-section .form-control {
+    display: unset;
+    margin-left: 3rem !important;
+    margin-right: auto;
+  }
+  .add-task-btn {
+    position: absolute !important;
+    right: 3.4rem !important;
+    margin-top: 0.7rem;
+  }
+  .profile-div {
+    margin-top: 2rem;
+    height: 70vh;
+  }
+
+  .profile-div-button {
+    margin-top: 3rem;
+  }
+
+  .useful-info-cls {
+    text-align: center;
+  }
+  .type-of-button {
+    left: 8rem;
+    top: 1rem;
+  }
+  #importanceSelection {
+    width: 147px !important;
+    margin-right: 2rem;
+    margin-top: 0.8rem;
+  }
+  #main-section .tag-input {
+    margin-left: 10rem !important;
+  }
+
+  .importance-info-class {
+    margin-top: 23rem !important;
+  }
+
+  .importance-button {
+    left: 1rem;
+    top: 1rem;
+  }
+
+  .name-of-task {
+    margin-top: 2rem;
+  }
+
+  .name {
+    margin-left: 0.5rem;
+  }
+
+  .weather-div,
+  .container {
+    width: 75% !important;
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+
+  /* Font parametres */
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  margin-left: 3rem;
+  padding-bottom: 2.8rem;
+  border-bottom: 2px solid #f9f9fb;
+}
+
+.main-div {
+  height: 100vh;
+  padding-top: 3.5rem;
+  overflow: scroll;
+}
+
+.task-line-div {
+  padding-top: 2rem;
+  margin-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+.weather-div .time-cls {
+  font-size: 2.7rem !important;
+}
+
+#main-div span {
+  color: #81838f;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.name-of-app {
+  margin: auto;
+}
+
+.name-of-task {
+  display: flex;
+  align-items: center;
+}
+
+.tag-button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.type-of-button {
+  position: absolute;
+  border-radius: 15px;
+  right: 5rem;
+  border: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #ece7fe;
+  color: #927bf0;
+  font-size: 0.8rem;
+}
+
+.type-of-button:hover {
+  border: 0;
+  background-color: #ece7fe;
+  color: #8f74e3;
+}
+
+.type-of-button:focus {
+  box-shadow: none;
+  background-color: #ece7fe;
+  color: #8f74e3;
+}
+
+.importance-button {
+  position: absolute;
+  border-radius: 15px;
+  right: 5rem;
+  border: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #ece7fe;
+  color: #927bf0;
+  font-size: 0.8rem;
+}
+
+.importance-button:hover {
+  border: 0;
+  background-color: #ece7fe;
+  color: #8f74e3;
+}
+
+.importance-button:focus {
+  box-shadow: none;
+  background-color: #ece7fe;
+  color: #8f74e3;
+}
+
+.done-btn {
+  border-radius: 15px;
+  border: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #e1faf4;
+  color: #8fd8c7;
+  font-size: 0.8rem;
+}
+
+.done-btn:hover {
+  background-color: #e1faf4;
+  color: #8fd8c7;
+  -webkit-box-shadow: 7px 2px 27px -12px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 7px 2px 27px -12px rgba(0, 0, 0, 0.43);
+  box-shadow: 7px 2px 27px -12px rgba(0, 0, 0, 0.43);
+}
+
+.remove-btn {
+  margin-left: 1rem;
+  border-radius: 15px;
+  border: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #ff8892;
+  color: #af0d1a;
+  font-size: 0.8rem;
+}
+
+.remove-btn:hover {
+  background-color: #ff8892;
+  color: #af0d1a;
+  -webkit-box-shadow: 7px 2px 27px -12px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 7px 2px 27px -12px rgba(0, 0, 0, 0.43);
+  box-shadow: 7px 2px 27px -12px rgba(0, 0, 0, 0.43);
+}
+
+.edit-btn {
+  display: none;
+  margin-left: 1.5rem;
+  border-radius: 15px;
+  border: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #623ce7;
+  font-size: 0.8rem;
+}
+
+.edit-btn:hover {
+  background-color: #623ce7;
+  -webkit-box-shadow: 7px 2px 27px -12px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 7px 2px 27px -12px rgba(0, 0, 0, 0.43);
+  box-shadow: 7px 2px 27px -12px rgba(0, 0, 0, 0.43);
+}
+
+.form-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-section .form-control {
+  width: 150px;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: 0.5rem;
+  border: 1px solid #623ce7;
+}
+
+#main-section .form-control:focus {
+  box-shadow: none;
+  border: 1px solid #623ce7;
+}
+
+#main-section .tag-input {
+  width: 110px;
+  margin-left: 10rem;
+}
+
+#main-section .task-input {
+  margin-right: -8.5rem;
+}
+
+::placeholder {
+  color: gray !important;
+}
+
+.add-task-btn {
+  margin-right: 0.5rem;
+  min-height: 45px;
+  min-width: 45px;
+
+  border: 0;
+  border-radius: 12px;
+  border-top-left-radius: 0;
+  color: #fff;
+  background-color: #623ce7;
+}
+
+.add-task-btn:hover {
+  background-color: #623ce7;
+  -webkit-box-shadow: 7px 2px 27px -12px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 7px 2px 27px -12px rgba(0, 0, 0, 0.43);
+  box-shadow: 7px 2px 27px -12px rgba(0, 0, 0, 0.43);
+}
+
+.add-task-btn:focus {
+  color: #fff;
+  background-color: #623ce7;
+  box-shadow: none;
+}
+
+.weather-div {
+  position: relative;
+  margin-top: 2.5rem;
+  height: 300px;
+  border-radius: 15px;
+  background-color: #d2e6ff;
+}
+
+.useful-info-cls {
+  margin-top: 3rem;
+  color: #56565c;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+}
+
+.weather-div .time-cls {
+  padding-top: 1rem;
+  padding-bottom: 0.8rem;
+  line-height: 3rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+}
+
+.degree-cls {
+  font-family: "Montserrat", sans-serif !important;
+  color: #fff;
+  font-size: 2.5rem !important;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2rem !important;
+}
+
+.weather-form-cls {
+  font-family: "Poppins", sans-serif !important;
+  color: #fff;
+  font-size: 1rem !important;
+  position: absolute;
+  margin-bottom: 0.9rem;
+  bottom: 0;
+}
+
+.fa-sun,
+.fa-cloud-rain,
+.fa-cloud {
+  position: absolute;
+  bottom: 0;
+  color: #697f8d;
+  font-size: 3rem;
+  margin-bottom: 5.5rem;
+  margin-left: 0.3rem;
+}
+
+.weather-div p {
+  margin-top: -1.5rem;
+  margin-left: 0.7rem;
+  font-family: "Poppins", sans-serif;
+  color: #7b90a1;
+  font-size: 1rem;
+}
+
+.quote-div {
+  position: relative;
+  margin-top: 2.5rem;
+  min-height: 170px;
+  border-radius: 15px;
+  background-color: #d2e6ff;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+}
+
+/* Profile Section Starts */
+
+.profile-div {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-div img {
+  width: 120px;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+
+  margin-top: 3rem;
+}
+
+.user-name-info {
+  position: absolute;
+  top: 12rem;
+  font-size: 1rem;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+
+.user-mail-info {
+  position: absolute;
+  top: 13.8rem;
+  font-size: 0.8rem;
+  color: #7b90a1;
+  font-family: "Poppins", sans-serif;
+}
+
+.user-number-info {
+  position: absolute;
+  top: 15.3rem;
+  font-size: 0.8rem;
+  color: #7b90a1;
+  font-family: "Poppins", sans-serif;
+}
+
+.advice-title-div-span {
+  color: grey;
+  position: absolute;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.advice-div-span {
+  color: grey;
+  position: absolute;
+  margin-top: 3.8rem;
+  font-size: 0.88rem;
+  font-family: "Poppins", sans-serif;
+  margin-right: 1.5rem;
+}
+
+.profile-div .btn {
+  margin: 0.5rem;
+}
+
+.profile-div a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50px;
+  background-color: #623ce7;
+  border: 0;
+  color: #fff;
+}
+
+.profile-div .done-items-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  background-color: #623ce7;
+  border: 0;
+}
+
+.profile-div .done-items-btn:focus {
+  box-shadow: none;
+}
+
+.profile-div .done-items-btn:active {
+  background-color: #623ce7 !important;
+}
+
+.profile-div a:hover {
+  color: #fff;
+  background-color: #623ce7;
+}
+
+.profile-div-button {
+  display: flex;
+}
+
+#main-div i {
+  color: white;
+}
+
+.profile-div a:focus {
+  border: 0;
+  box-shadow: none;
+}
+
+.profile-div a:active {
+  box-shadow: none;
+  border: 0;
+  background-color: #512cd4;
+}
+
+.importance-info-class {
+  margin-top: 20rem;
+  position: absolute;
+}
+
+.importance-info-class .btn {
+  border-radius: 25px;
+  font-family: "Poppins", sans-serif;
+  background-color: #ece7fe;
+  color: #927bf0;
+  font-size: 0.75rem;
+}
+
+.importance-info-class .number-btn {
+  border-radius: 50%;
+}
+
+.importance-info-class #all {
+  margin-left: 2.3rem;
+  width: 70px;
+}
+
+.importance-info-class .important {
+  margin-left: 1.8rem;
+  width: 90px;
+}
+
+.importance-info-class .semi-important {
+  font-size: 0.7rem;
+  margin-left: 0.73rem;
+  width: 130px;
+}
+
+.importance-info-class .not-important {
+  margin-left: 1.2rem;
+  width: 120px;
+}
+
+.percentage-btn {
+  margin-left: 1.2rem;
+
+  border: 0;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  color: #fff;
+  background-color: #e7ab3c;
+}
+
+.percentage-btn:hover {
+  background-color: #e7ab3c;
+  -webkit-box-shadow: 7px 2px 27px -12px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 7px 2px 27px -12px rgba(0, 0, 0, 0.43);
+  box-shadow: 7px 2px 27px -12px rgba(0, 0, 0, 0.43);
+}
+
+.percentage-btn:focus {
+  color: #fff;
+  background-color: #e7ab3c;
+  box-shadow: none;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Done Checkmark Animation Design starts */
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #7ac142;
+  fill: none;
+  animation: stroke 0.5s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  margin: 10% auto;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  animation: fill 0.3s ease-in-out 0.3s forwards,
+    scale 0.2s ease-in-out 0.8s both;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.2s cubic-bezier(0.65, 0, 0.45, 1) 0.7s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #7ac142;
+  }
+}
+
+.checked-div {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh !important;
+}
+
+.user-img {
+  position: relative;
+}
+
+/* Done Checkmark Animation Design ends */
+
+.edit-section .container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  max-width: 350px;
+  max-height: 410px;
+
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 2.5rem 2rem;
+}
+
+.edit-section #slider {
+  margin-top: 1rem;
+  margin-left: 4rem;
+}
+
+.edit-section .save-btn {
+  margin-top: 2rem;
+  margin-left: 4rem;
+  border-radius: 20px;
+  border: 0;
+  width: 150px;
+  height: 43px;
+  background-color: #e17055;
+}
+
+.edit-section .form-control {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px rgb(189, 189, 189) solid;
+  border-radius: 0;
+  font-size: 1rem;
+}
+
+.edit-section .form-control:focus {
+  box-shadow: none;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px rgb(95, 94, 94) solid;
+  border-radius: 0;
+}
